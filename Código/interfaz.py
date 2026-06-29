@@ -11,7 +11,7 @@ from archivos import Archivos
 from mundial import Mundial
 
 RUTA_BASE = os.path.dirname(os.path.abspath(__file__))
-RUTA_FONDO = os.path.join(RUTA_BASE, "imagenes", "fondo_inicio.png")
+RUTA_FONDO = os.path.join(RUTA_BASE, "fondo_inicio.png")
 
 # =========================================================================
 # VENTANA PRINCIPAL
@@ -132,7 +132,7 @@ class VentanaPrincipal(tk.Tk):
         menu.pack(side=tk.LEFT, fill=tk.Y)
         menu.pack_propagate(False)
         
-        ruta_logo = os.path.join(RUTA_BASE, "imagenes", "logomenu.png")
+        ruta_logo = os.path.join(RUTA_BASE, "logomenu.png")
         self.logo_menu = tk.PhotoImage(file=ruta_logo)
         self.logo_menu = self.logo_menu.subsample(7, 7)
         tk.Label(menu, image=self.logo_menu, bg=self.color_menu).pack(pady=(25, 0))
